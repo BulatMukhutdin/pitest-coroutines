@@ -1,0 +1,15 @@
+apply plugin: 'pl.droidsonroids.pitest'
+
+pitest {
+    targetClasses = ['tat.mukhutdinov.pitestcoroutines.*']
+    excludedClasses = [
+            'tat.mukhutdinov.pitestcoroutines.MainActivity*'
+    ]
+    mutationThreshold = 0
+    threads = 4
+    timeoutConstInMillis = 2000
+    pitestVersion = '1.4.11'
+    failWhenNoMutations = false
+    outputFormats = ['HTML']
+    timestampedReports = false
+}
